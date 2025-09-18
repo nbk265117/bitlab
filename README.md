@@ -171,4 +171,50 @@ php core/artisan tinker --execute="\\App\\Models\\Admin::create(['username'=>'ad
 
 Then login at `http://localhost/admin`.
 
+---
+
+## How to Start
+
+Starting with BetLab is quick and straightforward. Whether you're launching a new sports betting platform or upgrading an existing one, follow these simple steps to get up and running:
+
+### General Settings & System Configuration
+- Set platform details like title, currency, timezone, and base color under General Settings in the System Settings menu.
+- Control key features such as Bettor Registration, Force SSL, KYC Verification, Email/Mobile Verification, and the Referral Program under System Configuration in the System Settings menu.
+
+### Configure API Settings (Optional)
+- If you want to automate the process of fetching sports data, configure the API integration in the API Setting under System Settings menu.
+- Choose whether to use automatic API data fetching for categories, leagues, games, markets, and odds, or add them manually.
+
+### Set Up Cron Jobs
+Configure the following cron jobs under the System Settings to automate key tasks:
+- Fetch Leagues: Fetches leagues, tournaments, and competitions from the API and updates the database.
+- Fetch Games (Optional): Fetches games from the API and updates the database. If you want to manually add odds but fetch games from the API, set up this cron job. Games can also be fetched when updating odds.
+- Fetch Odds: Fetches all odds, including live odds, from the API and updates the database.
+- Fetch In-Play Odds: Fetches in-play odds from the API and updates the database.
+- Enable Games to Bet: Automatically updates games from "Not Open for Betting" to "Open for Betting" once the game start time is reached.
+- Process Winning Bets: Updates users' balances by adding the return amount for winning bets and sends a notification.
+- Manage Losing Bets: Notifies users about their losing bets.
+- Manage Refundable Bets: Refunds the stake amount by adding it back to the user’s balance and sends a notification.
+
+### Configure Sports
+- Add sports categories, tournaments, leagues, teams, and games to your platform.
+- Set up betting markets and odds either automatically via the API or manually.
+
+### Add Games, Markets & Odds
+- Add sports categories, tournaments, leagues, teams, and games to your platform.
+- Set up betting markets and odds either automatically via the API or manually.
+
+### Add Payment Gateways & Withdrawal Methods
+- Configure over 30+ payment gateways and set up custom withdrawal methods under the System Settings to facilitate secure user transactions.
+
+### Configure Notification Settings
+- Set up push, SMS, and email notifications to keep users engaged with timely updates about their bets, odds, and results.
+
+### Customize Frontend Contents
+- Personalize your platform’s frontend, including your logo, favicon, and custom CSS to align with your brand. Configure policy pages, social logins, and extensions like Custom Captcha, Google Recaptcha, Google Analytics, Facebook Comment, and Tawk.to—all within the System Settings.
+
+### Test and Launch
+- Conduct thorough testing to ensure everything works smoothly.
+- Once satisfied, launch your platform to start accepting bets and engaging users!
+
 

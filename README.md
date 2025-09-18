@@ -199,6 +199,7 @@ Configure the following cron jobs under the System Settings to automate key task
 ### Configure Sports
 - Add sports categories, tournaments, leagues, teams, and games to your platform.
 - Set up betting markets and odds either automatically via the API or manually.
+  Teams will be automatically added when the Fetch Games or Fetch Odds cron job runs on the server. You can also add teams manually.
 
 ### Add Games, Markets & Odds
 - Add sports categories, tournaments, leagues, teams, and games to your platform.
